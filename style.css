@@ -1,0 +1,19 @@
+body {
+    display:flex;
+    flex-direction: column;
+    background: red;
+    text-align: center;
+}
+h1 {
+    color: aliceblue;
+}
+
+#timerValue{
+    color: aliceblue
+}
+ 
+.button {
+    background-color:aliceblue;
+    opacity: 100%;
+
+}

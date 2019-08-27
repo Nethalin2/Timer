@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Mark's Countdown Timer</h1>
+ <div>
+        <input type="text" id="hour" placeholder="Hour">
+ </div> 
+ <div>
+        <input type="text" id="min" placeholder="Min">
+ </div>  
+ <div>   
+        <input type="text" id="sec" placeholder="Sec">
+ </div>
+ <div>
+        <input class = "button" type="button" value="Start" onclick="settimer();">
+</div>       
+<div>
+        <input class="button" type="button" value="Pause" onclick="pause();">
+</div>
+<div>    
+        <input class="button" type="button" value="Reset" onClick="document.location.reload(true)">
+</div>
+        <p id="timerValue"></p>
+    
+    <script src="app.js"></script>
+</body>
+</html>
