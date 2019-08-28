@@ -11,7 +11,7 @@ clearInterval(timer);
     if(timerMin=="")timerMin = 0;
     let timerSec = document.getElementById("sec").value;
 
-    let timerDate = timerHour * 3600 + timerMin *60 + timerSec 
+    let timerDate = timerHour * 3600 + timerMin *60 + timerSec * 1
     console.log(timerDate)
     
     let second = 1;
