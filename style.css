@@ -6,14 +6,16 @@ body {
 }
 h1 {
     color: aliceblue;
+    font-size: 50px;
     
 }
 
 #timerValue{
-    color: aliceblue
+    color: aliceblue;
+    font-size: 50px;
 }
  
-.button {
+button {
     background-color:aliceblue;
     opacity: 100%;
 
