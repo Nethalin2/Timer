@@ -8,7 +8,12 @@
     <title>Countdown Timer</title>
 </head>
 <body>
-    <h1>Mark's Countdown Timer</h1>
+       <div class="main">
+    <h1>Meditate with Mark</h1>
+
+    <video id="bgvid" muted controls autoplay loop poster="seamain.jpg">
+           <source src="sea.mp4">
+    </video>
  <div>
         <input type="text" id="hour" placeholder="Hour">
  </div> 
@@ -28,6 +33,7 @@
         <input class="button" type="button" value="Reset" onClick="document.location.reload(true)">
 </div>
         <p id="timerValue"></p>
+        </div>
     
     <script src="app.js"></script>
 </body>

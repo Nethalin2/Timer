@@ -1,11 +1,12 @@
 body {
     display:flex;
     flex-direction: column;
-    background: red;
+    background:url("seamain.jpg") no-repeat;
     text-align: center;
 }
 h1 {
     color: aliceblue;
+    
 }
 
 #timerValue{
@@ -16,4 +17,38 @@ h1 {
     background-color:aliceblue;
     opacity: 100%;
 
+}
+
+#bgvid{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width : 100%;
+    min-height : 100%;
+    width: auto;
+    height: auto;
+    background:url("seamain.jpg") no-repeat;
+    background-size:cover;
+    z-index: -1;
+        }
+
+ .main {
+     display: flex;
+     flex-direction: column;
+ }   
+
+ input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
 }

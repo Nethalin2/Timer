@@ -1,8 +1,10 @@
 let timer;
-
+let myMusic;
 const settimer = () => {
 
 clearInterval(timer);
+myMusic = new Audio("music.mp3")
+myMusic.play().loop
 
     
     let timerHour = document.getElementById("hour").value;
@@ -22,7 +24,10 @@ clearInterval(timer);
 const showtimer = () => {
     if(timerDate == 0)
     {
-        new Audio("http://www.frontiernet.net/~gmills/sounds/sdive.wav").play()
+        myMusic.pause()
+        myMusic.currentTime = 0;
+        console.log(myMusic)
+        new Audio("alarm.mp3").play();
         clearInterval(timer);
         document.getElementById("timerValue").innerHTML ='Timer Finished!';
         document.getElementById("submit").value = 'Reset';
@@ -45,6 +50,8 @@ const showtimer = () => {
        
         }
         const pause = () => {
+            myMusic.pause();
+
             clearInterval(timer)
         }
         
