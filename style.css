@@ -6,13 +6,15 @@ body {
 }
 h1 {
     color: aliceblue;
+    font-family: 'Roboto';
     font-size: 50px;
     
 }
 
 #timerValue{
     color: aliceblue;
-    font-size: 50px;
+    font-family: 'Roboto';
+    font-size: 30px;
 }
  
 button {
@@ -54,3 +56,33 @@ button {
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
 }
+
+svg {
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    /* width: 40px;
+    height: 40px; */
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+  
+  .circle {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    transition: stroke-dashoffset 1.0s;
+    animation: countdown 0s linear infinite forwards;
+  }
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 500px;
+    }
+  }
+
+ 

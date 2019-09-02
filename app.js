@@ -1,7 +1,8 @@
 let timer;
 let myMusic;
 const settimer = () => {
-
+    document.getElementsByClassName("circle")[0].style.opacity=100;
+document.getElementsByClassName("circle")[0].style.animation="countdown 1s infinite";
 clearInterval(timer);
 myMusic = new Audio("music.mp3")
 myMusic.play().loop
@@ -24,6 +25,7 @@ myMusic.play().loop
 const showtimer = () => {
     if(timerDate == 0)
     {
+        document.getElementsByClassName("circle")[0].style.opacity=0;
         myMusic.pause()
         myMusic.currentTime = 0;
         console.log(myMusic)
@@ -33,7 +35,8 @@ const showtimer = () => {
         document.getElementById("submit").value = 'Reset';
         return;
     } else {
-        timerDate--
+        timerDate--;
+        document.getElementsByClassName("circle")[0].style.stroke="blue";
     }
         
         let hours = Math.floor((timerDate % day) / hour);
