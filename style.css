@@ -74,7 +74,8 @@ svg {
     stroke: white;
     fill: none;
     transition: stroke-dashoffset 1.0s;
-    animation: countdown 0s linear infinite forwards;
+    animation-timing-function: linear;
+    
   }
   @keyframes countdown {
     from {

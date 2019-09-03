@@ -2,19 +2,21 @@ let timer;
 let myMusic;
 const settimer = () => {
     document.getElementsByClassName("circle")[0].style.opacity=100;
-document.getElementsByClassName("circle")[0].style.animation="countdown 1s infinite";
+
 clearInterval(timer);
 myMusic = new Audio("music.mp3")
 myMusic.play().loop
 
     
     let timerHour = document.getElementById("hour").value;
-    if(timerHour=="")timerHour = 0; 
+    if(timerHour==""){timerHour = 0;} 
     let timerMin = document.getElementById("min").value;
-    if(timerMin=="")timerMin = 0;
+    if(timerMin==""){timerMin = 0;}
     let timerSec = document.getElementById("sec").value;
 
-    let timerDate = timerHour * 3600 + timerMin *60 + timerSec * 1
+    let timerDate = (timerHour * 3600) + (timerMin *60) + (timerSec)
+    document.getElementsByClassName("circle")[0].style.animation=`countdown ${timerDate}s linear infinite forwards`;
+    document.getElementsByClassName("circle")[0].style.strokeDasharray = 500;
     console.log(timerDate)
     
     let second = 1;
@@ -23,9 +25,15 @@ myMusic.play().loop
     let day = hour * 24;
 
 const showtimer = () => {
+    if (timerDate == 1){
+        document.getElementsByClassName("circle")[0].style.opacity=0;
+        document.getElementsByClassName("circle")[0].style.animation="none"
+    }
+
     if(timerDate == 0)
     {
         document.getElementsByClassName("circle")[0].style.opacity=0;
+        document.getElementsByClassName("circle")[0].style.animation="none"
         myMusic.pause()
         myMusic.currentTime = 0;
         console.log(myMusic)
